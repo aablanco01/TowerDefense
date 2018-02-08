@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 public class TowerUpgrade : UpgradeSystem
 {
@@ -32,6 +33,8 @@ public class TowerUpgrade : UpgradeSystem
         {
             if (goldRef.CurrentGold >= TowerArmorGoldCostI)
             {
+                Analytics.CustomEvent("Tower Armor Upgrade 1");
+
                 goldRef.CurrentGold -= TowerArmorGoldCostI;
                 CurrentLevel = TowerArmorLevels.LEVELONE;
                 towerRef.MaxHealth += TowerHPIncreaseI;
@@ -45,6 +48,8 @@ public class TowerUpgrade : UpgradeSystem
         {
             if (goldRef.CurrentGold >= TowerArmorGoldCostII)
             {
+                Analytics.CustomEvent("Tower Armor Upgrade 2");
+
                 goldRef.CurrentGold -= TowerArmorGoldCostII;
                 CurrentLevel = TowerArmorLevels.LEVELTWO;
                 towerRef.MaxHealth += TowerHPIncreaseII;
@@ -58,6 +63,8 @@ public class TowerUpgrade : UpgradeSystem
         {
             if (goldRef.CurrentGold >= TowerArmorGoldCostIII)
             {
+                Analytics.CustomEvent("Tower Armor Upgrade 3");
+
                 goldRef.CurrentGold -= TowerArmorGoldCostIII;
                 CurrentLevel = TowerArmorLevels.LEVELTHREE;
                 towerRef.MaxHealth += TowerHPIncreaseIII;
@@ -77,6 +84,8 @@ public class TowerUpgrade : UpgradeSystem
     {
         if (goldRef.CurrentGold >= TowerRestoreGoldCost)
         {
+            Analytics.CustomEvent("Tower HP Restore");
+
             if (towerRef.Health < towerRef.MaxHealth)
             {
                 goldRef.CurrentGold -= TowerRestoreGoldCost;

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 public class FireThunder : MonoBehaviour
 {
@@ -31,12 +32,15 @@ public class FireThunder : MonoBehaviour
             {
                 if (CD_Ref.ThunderCasted == false)
                 {
+                    Analytics.CustomEvent("Thunder Strike Usage");
+
                     manapoolRef.CurrentMana -= CastCost;
                     Fire();
                 }
             }
             else
             {
+                Analytics.CustomEvent("Ran out of Mana");
                 //Out of Mana!
             }
             

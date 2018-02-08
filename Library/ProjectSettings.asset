@@ -600,10 +600,14 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
+    Build: 0
+    Collab: 0
+    ErrorHub: 0
+    Hub: 0
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: d7ed4d78-dfe7-40f6-aca2-9fad3de7724a
+  cloudProjectId: 2cd96537-41e0-4070-a432-cfc192593185
   projectName: TowerDefense
   organizationId: angel-blanco
   cloudEnabled: 0

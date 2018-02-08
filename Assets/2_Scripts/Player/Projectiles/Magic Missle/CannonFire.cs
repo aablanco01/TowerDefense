@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 public class CannonFire : MonoBehaviour
 {
@@ -33,12 +34,15 @@ public class CannonFire : MonoBehaviour
             {
                 if (CD_Ref.MMCasted == false)
                 {
+                    Analytics.CustomEvent("Magic Missile Usage");
+
                     manapoolRef.CurrentMana -= CastCost;
                     Fire();
                 }
             }
             else
             {
+                Analytics.CustomEvent("Ran out of Mana");
                 //Out of Mana!
             }
 

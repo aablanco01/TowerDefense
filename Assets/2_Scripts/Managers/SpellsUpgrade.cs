@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 public class SpellsUpgrade : UpgradeSystem
 {
@@ -65,6 +66,7 @@ public class SpellsUpgrade : UpgradeSystem
 
         StartButton = GameObject.Find("Next Wave Button");
         StartButton.SetActive(false);
+        MagicMissileUpgrade();
 
     }
 
@@ -82,6 +84,9 @@ public class SpellsUpgrade : UpgradeSystem
         {
             if (goldRef.CurrentGold >= MagicMissileIGoldCost)
             {
+                Analytics.CustomEvent("Magic Missile Upgrade 1");
+
+
                 spellManager_Ref.MMUnlocked = true;
                 goldRef.CurrentGold -= MagicMissileIGoldCost;
                 MMCurrentLevel = MagicMissileUpgradeLevel.LEVELONE;
@@ -99,6 +104,9 @@ public class SpellsUpgrade : UpgradeSystem
         {
             if (goldRef.CurrentGold >= MagicMissileIIGoldCost)
             {
+                Analytics.CustomEvent("Magic Missile Upgrade 2");
+
+
                 spellManager_Ref.MMUnlocked = true;
                 goldRef.CurrentGold -= MagicMissileIIGoldCost;
                 MMCurrentLevel = MagicMissileUpgradeLevel.LEVELTWO;
@@ -112,6 +120,8 @@ public class SpellsUpgrade : UpgradeSystem
         {
             if (goldRef.CurrentGold >= MagicMissileIIIGoldCost)
             {
+                Analytics.CustomEvent("Magic Missile Upgrade 3");
+
                 spellManager_Ref.MMUnlocked = true;
                 goldRef.CurrentGold -= MagicMissileIIIGoldCost;
                 MMCurrentLevel = MagicMissileUpgradeLevel.LEVELTHREE;
@@ -133,6 +143,9 @@ public class SpellsUpgrade : UpgradeSystem
         {
             if (goldRef.CurrentGold >= ThunderIGoldCost)
             {
+                Analytics.CustomEvent("Thunder Strike Upgrade 1");
+
+
                 spellManager_Ref.ThunderUnlocked = true;
                 goldRef.CurrentGold -= ThunderIGoldCost;
                 TCurrentLevel = ThunderUpgradeLevel.LEVELONE;
@@ -147,6 +160,8 @@ public class SpellsUpgrade : UpgradeSystem
         {
             if (goldRef.CurrentGold >= ThunderIGoldCost)
             {
+                Analytics.CustomEvent("Thunder Strike Upgrade 2");
+
                 spellManager_Ref.ThunderUnlocked = true;
                 goldRef.CurrentGold -= ThunderIIGoldCost;
                 TCurrentLevel = ThunderUpgradeLevel.LEVELTWO;
@@ -160,6 +175,8 @@ public class SpellsUpgrade : UpgradeSystem
         {
             if (goldRef.CurrentGold >= ThunderIGoldCost)
             {
+                Analytics.CustomEvent("Thunder Strike Upgrade 3");
+
                 spellManager_Ref.ThunderUnlocked = true;
                 goldRef.CurrentGold -= ThunderIIIGoldCost;
                 TCurrentLevel = ThunderUpgradeLevel.LEVELTHREE;
@@ -181,6 +198,8 @@ public class SpellsUpgrade : UpgradeSystem
         {
             if (goldRef.CurrentGold >= EarthSpikeIGoldCost)
             {
+                Analytics.CustomEvent("Earth Spike Upgrade 1");
+
                 spellManager_Ref.EarthSpikeUnlocked = true;
                 goldRef.CurrentGold -= EarthSpikeIGoldCost;
                 ESCurrentLevel = EarthSpikeUpgradeLevel.LEVELONE;
@@ -195,6 +214,8 @@ public class SpellsUpgrade : UpgradeSystem
         {
             if (goldRef.CurrentGold >= EarthSpikeIIGoldCost)
             {
+                Analytics.CustomEvent("Earth Spike Upgrade 2");
+
                 spellManager_Ref.EarthSpikeUnlocked = true;
                 goldRef.CurrentGold -= EarthSpikeIIGoldCost;
                 ESCurrentLevel = EarthSpikeUpgradeLevel.LEVELTWO;
@@ -208,6 +229,8 @@ public class SpellsUpgrade : UpgradeSystem
         {
             if (goldRef.CurrentGold >= EarthSpikeIGoldCost)
             {
+                Analytics.CustomEvent("Earth Spike Upgrade 3");
+
                 spellManager_Ref.EarthSpikeUnlocked = true;
                 goldRef.CurrentGold -= EarthSpikeIIIGoldCost;
                 ESCurrentLevel = EarthSpikeUpgradeLevel.LEVELTHREE;

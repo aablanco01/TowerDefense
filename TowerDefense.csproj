@@ -222,6 +222,7 @@
     <Compile Include="Assets\2_Scripts\Base Classes\EnemyStats.cs" />
     <Compile Include="Assets\2_Scripts\Base Classes\SpellsStats.cs" />
     <Compile Include="Assets\2_Scripts\Base Classes\TowerStats.cs" />
+    <Compile Include="Assets\2_Scripts\Managers\InfoManager.cs" />
     <Compile Include="Assets\2_Scripts\Managers\ManaUpgrade.cs" />
     <Compile Include="Assets\2_Scripts\Managers\SpellsUpgrade.cs" />
     <Compile Include="Assets\2_Scripts\Managers\TowerUpgrade.cs" />

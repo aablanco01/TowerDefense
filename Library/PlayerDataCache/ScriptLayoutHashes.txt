@@ -157,3 +157,4 @@ c4c570ff19447bf70e3185685ea4243d Assembly-CSharp.dll:.SpellBaseClass
 f3a25238ec14257057e3b75aaccbd518 Assembly-CSharp.dll:.CannonFire
 431767defa7f9a822075a85ba257a1cf Assembly-CSharp.dll:.ManaPool
 1f8c54b991af11bb0e377a617f4dd09f Assembly-CSharp.dll:.SpellsUpgrade
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.InfoManager

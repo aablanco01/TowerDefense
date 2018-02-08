@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 public class ManaUpgrade : UpgradeSystem
 {
@@ -36,6 +37,8 @@ public class ManaUpgrade : UpgradeSystem
         {
             if (goldRef.CurrentGold >= ManaRegenIGoldCost)
             {
+                Analytics.CustomEvent("Mana Regen Upgrade 1");
+
                 goldRef.CurrentGold -= ManaRegenIGoldCost;
                 manapoolRef.ManaRegenRate = ManaRegenI;
                 CurrentRegenLevel = ManaRegenLevel.LEVELONE;
@@ -48,6 +51,8 @@ public class ManaUpgrade : UpgradeSystem
         {
             if (goldRef.CurrentGold >= ManaRegenIIGoldCost)
             {
+                Analytics.CustomEvent("Mana Regen Upgrade 2");
+
                 goldRef.CurrentGold -= ManaRegenIIGoldCost;
                 manapoolRef.ManaRegenRate = ManaRegenII;
                 CurrentRegenLevel = ManaRegenLevel.LEVELTWO;
@@ -60,6 +65,8 @@ public class ManaUpgrade : UpgradeSystem
         {
             if (goldRef.CurrentGold >= ManaRegenIIIGoldCost)
             {
+                Analytics.CustomEvent("Mana Regen Upgrade 3");
+
                 goldRef.CurrentGold -= ManaRegenIIIGoldCost;
                 manapoolRef.ManaRegenRate = ManaRegenIII;
                 CurrentRegenLevel = ManaRegenLevel.LEVELTHREE;
@@ -80,6 +87,8 @@ public class ManaUpgrade : UpgradeSystem
         {
             if (goldRef.CurrentGold >= ManaPoolGoldCostI)
             {
+                Analytics.CustomEvent("Mana Pool Upgrade 1");
+
                 goldRef.CurrentGold -= ManaPoolGoldCostI;
                 manapoolRef.MaxManaPool += ManaPoolIncreaseI;
                 manapoolRef.CurrentMana = manapoolRef.MaxManaPool;
@@ -93,6 +102,8 @@ public class ManaUpgrade : UpgradeSystem
         {
             if (goldRef.CurrentGold >= ManaPoolGoldCostII)
             {
+                Analytics.CustomEvent("Mana Pool Upgrade 2");
+
                 goldRef.CurrentGold -= ManaPoolGoldCostII;
                 manapoolRef.MaxManaPool += ManaPoolIncreaseII;
                 manapoolRef.CurrentMana = manapoolRef.MaxManaPool;
@@ -106,6 +117,9 @@ public class ManaUpgrade : UpgradeSystem
         {
             if (goldRef.CurrentGold >= ManaPoolGoldCostIII)
             {
+                Analytics.CustomEvent("Mana Pool Upgrade 3");
+
+
                 goldRef.CurrentGold -= ManaPoolGoldCostIII;
                 manapoolRef.MaxManaPool += ManaPoolIncreaseIII;
                 manapoolRef.CurrentMana = manapoolRef.MaxManaPool;

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 public class UnleashEarth : MonoBehaviour
 {
@@ -32,6 +33,8 @@ public class UnleashEarth : MonoBehaviour
             {
                 if (IsCast == false)
                 {
+                    Analytics.CustomEvent("Earth Spike Usage");
+
                     manapoolRef.CurrentMana -= CostCast;
                     IsCast = true;
                     StartCoroutine("ShowEarth");
@@ -40,6 +43,7 @@ public class UnleashEarth : MonoBehaviour
             else
             {
                 //Out of Mana!
+                Analytics.CustomEvent("Ran out of Mana");
             }
 
             
